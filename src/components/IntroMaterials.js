@@ -13,7 +13,7 @@ export class IntroMaterials extends Component {
         <div id="main">
 						<div class="inner">
             <section>
-									<header class="main">
+									<header class="major">
 										<h2>Neural codes: a brief introduction</h2>
 									</header>
 

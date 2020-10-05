@@ -10,7 +10,11 @@ export class BiblioPage extends Component {
         </NavBar>
         <div id="main">
 						<div class="inner">
-        <hr class="major" />
+        {/* <hr class="major" /> */}
+        <section>
+        <header class="major">
+						<h2>Papers</h2>
+				</header>
         <h2>Preprints</h2>
           <ol reversed>
             <li>B. Gambacini, S. Macdonald, A. Shiu. Open and closed convexity of sparse neural codes. </li>
@@ -79,7 +83,7 @@ export class BiblioPage extends Component {
 
           </ol>
          
-
+          </section>
 					</div>		
         </div>		
 
