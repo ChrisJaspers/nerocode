@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import NavBar from "./NavBar";
 import Section1 from "./Section1";
-import Section2 from "./Section2";
+import Footer from "./Footer";
 
 export class IntroPage extends Component {
   render() {
@@ -14,9 +14,9 @@ export class IntroPage extends Component {
 
         </Section1>
 
-        <Section2>
+        <Footer>
           
-        </Section2>
+        </Footer>
       </div>
     );
   }

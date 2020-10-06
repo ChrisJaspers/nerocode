@@ -68,6 +68,15 @@ function Navbar() {
                 Resources
               </Link>
             </li>
+            <li className='nav-item'>
+              <Link
+                to='/questionboard'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                Open Questions 
+              </Link>
+            </li>
 
             {/* <li>
               <Link

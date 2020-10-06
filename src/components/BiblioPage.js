@@ -1,9 +1,34 @@
 import React, { Component } from "react";
 import NavBar from "./NavBar";
-
+import Footer from "./Footer";
+import Tabletop from 'tabletop';
 
 export class BiblioPage extends Component {
+
+  constructor() {
+    super()
+    this.state = {
+      data: []
+    }
+  }
+
+  componentDidMount() {
+    Tabletop.init({
+      key: '1XbdeFvyPxiJ310yUEm724p_fWNgfArF65bJFtyFnkfw',
+      callback: googleData => {
+        this.setState({
+          data: googleData
+        })
+      },
+      simpleSheet: true
+    })
+  }
+
+
+
+
   render() {
+    const {data} = this.state
     return (
       <div>
         <NavBar> 
@@ -27,7 +52,28 @@ export class BiblioPage extends Component {
           <hr class="major" />
           <h2>Publications</h2>
 
-          <ol reversed>
+          <ol>
+          {
+            data.map(obj => {
+              return (
+                <li>{obj.Author} 
+                <b> {obj.Title}</b> 
+                     {  }    {obj.Journal} 
+                     {'       '}
+                     <a href={obj.Journal_Link}>
+                      [Journal Link]
+                     </a>
+                     {'       '}
+                     <a href={obj.Arxiv_Link}>
+                      [Arxiv Link]
+                     </a>
+              </li>
+             )
+            })
+          }
+          </ol>
+
+          {/* <ol reversed>
             <li>A. Ruys de Perez, L. Matusevich, A. Shiu. 
               <b> Neural codes and the factor complex.</b> 
               Advances in Applied
@@ -81,12 +127,12 @@ export class BiblioPage extends Component {
             <li>C. Curto, V. Itskov. <b>Cell groups reveal structure of stimulus space.</b> 
                 PLoS Computational Biology, Vol. 4(10): e1000205, 2008</li>
 
-          </ol>
+          </ol> */}
          
           </section>
 					</div>		
         </div>		
-
+        <Footer></Footer>
         {/* <h1>This is the Bibliography Page</h1> */}
       </div>
     );

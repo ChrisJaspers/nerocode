@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import NavBar from "./NavBar";
+import Footer from "./Footer";
 
 
 export class IntroMaterials extends Component {
@@ -56,7 +57,7 @@ As a list of binary vectors, where the vector v equates to the set s of its supp
 								</section>
             </div>
         </div>
-
+		<Footer></Footer>
       </div>
     );
   }

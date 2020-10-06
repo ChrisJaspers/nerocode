@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 
-export class Resources extends Component {
+export class QuestionBoard extends Component {
   render() {
     return (
       <div>
@@ -12,7 +12,7 @@ export class Resources extends Component {
 						<div class="inner">
             <section>
 									<header class="major">
-										<h2>Computational Resources</h2>
+										<h2>Open Questions</h2>
 									</header>
 									<div class="posts">
 										<article>
@@ -68,10 +68,10 @@ export class Resources extends Component {
           </div>
         </div>
         {/* <h1>This is the Resources Page</h1> */}
-		<Footer></Footer>
+        <Footer></Footer>
       </div>
     );
   }
 }
 
-export default Resources;
+export default QuestionBoard;

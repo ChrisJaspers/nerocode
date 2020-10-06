@@ -6,6 +6,7 @@ import IntroPage from "./IntroPage";
 import IntroMaterials from "./IntroMaterials";
 import BiblioPage from "./BiblioPage";
 import Resources from "./Resources";
+import QuestionBoard from "./QuestionBoard";
 
 
 export class Pages extends Component {
@@ -29,6 +30,9 @@ export class Pages extends Component {
                 </Route>
                 <Route path="/resources">
                   <Resources />
+                </Route>
+                <Route path="/questionboard">
+                  <QuestionBoard />
                 </Route>
                 
               </Switch>
